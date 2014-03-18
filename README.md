@@ -11,9 +11,13 @@ simulations as they are running. The scripts can retrieve information from the
 simulation (e.g., time step, location of a vehicle) and also update information
 (e.g., the destination of a vehicle).
 
-At this point, interacting with persons is not included. This is a first attempt
-at incorporating Person objects into the TraCI implementation. Some tests are
-also included.
+At this point, interacting with persons is not included. Interacting with
+persons is important if persons need to be told which bus/vehicle to wait for
+(if it is not determined at the start of the simulation) and if they want to
+change their plans.
+
+This is a first attempt at incorporating Person objects into the TraCI
+implementation. Some tests are also included.
 
 This release (based on SUMO 0.20.0) includes the following commands:
 * id list (0x00): returns a list of ids of all persons currently running 
@@ -29,4 +33,6 @@ VAR\_STAGE is a new command added to TraCIConstants.h.
 
 Future work:
 * updating the TraCI python interface
-* including more commands
+* including more commands, e.g., wait for (which I've added and tested in
+\0.18.0, but haven't updated here), changing plans
+
