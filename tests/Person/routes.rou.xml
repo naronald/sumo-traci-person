@@ -1,0 +1,20 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/routes_file.xsd">   
+
+	<vType id="bus" accel="2.6" decel="4.5" sigma="0.5" length="12" minGap="3" maxSpeed="70" emissionClass="HDV_6_2" guiShape="bus/city" vClass="bus"/>
+	
+	<vehicle id="bus_1" depart="0" departPos="0" departLane="free"
+arrivalPos="-1" type="bus" color="0,1,0" line="101">
+		<route edges="e_m3 e_m4 e_m5 e_m6 e_shape1"/>
+        <stop busStop="busStop#1" duration="20"/>
+        <stop busStop="busStop#2" duration="60"/>
+    </vehicle>
+
+
+<person id="person0" depart="0">
+        <walk from="e_vu1" to="e_m5" departPos="450" arrivalPos="20"/>
+		<ride from="e_m5" to="e_shape0" lines="101"/>
+	</person>
+
+	
+	<route id="test" edges="e_m5 e_m6 e_shape0"/>
+</routes>

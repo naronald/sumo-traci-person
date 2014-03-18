@@ -1,0 +1,6 @@
+simstep2 5
+getvariable 0xad 0x69 person0
+simstep2 35
+getvariable 0xad 0x69 person0
+simstep2 45
+getvariable 0xad 0x69 person0
